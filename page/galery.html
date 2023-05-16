@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
+</head>
+<body>
+  <h1> MENU ANDALAN</h1>
+  <div class="grid-container">
+    <div class="grid-item"> <center> <h3>Paru Balado</h3> </center><img src="image/1.jpeg"></div>
+    <div class="grid-item"><center><h3>Jengkol Balado</h3></center><img src="image/2.jpeg"></div>
+    <div class="grid-item"><center><h3>Cumi Asin Ijo</h3></center><img src="image/3.jpeg"></div>
+    <div class="grid-item"><center><h3>Tumis Oncom</h3></center><img src="image/4.jpeg"></div>
+    <div class="grid-item"><center><h3>Dendeng Balado</h3></center><img src="image/5.jpeg"></div>
+    <div class="grid-item"><center><h3>Teri Daun Paya</h3></center><img src="image/6.jpeg"></div>
+    <div class="grid-item"><center><h3>Ayam Rica-Rica</h3></center><img src="image/7.jpeg"></div>
+    <div class="grid-item"><center><h3>Pepes Ikan Mas</h3></center><img src="image/8.jpeg"></div>
+    <div class="grid-item"><center><h3>Teri Kacang</h3></center><img src="image/11.jpeg"></div>
+    <div class="grid-item"><center><h3>Paket Ketupat </h3></center><img src="image/12.jpeg"></div>
+    <div class="grid-item"><center><h3>Gudeg Jogja + Krecek</h3></center><img src="image/13.jpeg"></div>
+    <div class="grid-item"><center><h3>Rendang + Kentang Ati</h3></center><img src="image/14.jpeg"></div>
+    
+  </div>
+  
+  
+</body>
+</html>

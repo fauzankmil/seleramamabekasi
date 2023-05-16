@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Request Pesanan</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+  <style>
+		.containerreq {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+			display: flex;
+		}
+
+		.leftreq {
+			width: 100%;
+		
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		.rightreq {
+			float: right;
+			width: 300px;
+			
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		@media screen and (max-width: 768px) {
+			.containerreq {
+				flex-direction: column;
+			}
+
+			.rightreq {
+				float: none;
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Form Request Pesanan</h1>
+	</header>
+	<main>
+		<form action="https://wa.me/6281511516853?text=Halo%2C%20saya%20tertarik%20untuk%20membeli%20pesanan%20sebagai%20berikut%3A" method="GET">
+<div class="containerreq">
+  <div class="leftreq">
+      <fieldset>
+				<legend>Informasi Pelanggan</legend>
+				<label for="nama">Nama</label>
+				<br><input type="text" id="nama" name="nama" required>
+<br>
+				<label for="email">Email</label>
+				<br><input type="email" id="email" name="email" required>
+<br>
+<br>
+				<label for="telepon">No. Telepon</label>
+		<br>		<input type="tel" id="telepon" name="telepon" required>
+<br>
+<br>
+				<label for="alamat">Alamat</label>
+<br>				<textarea id="alamat" name="alamat" required></textarea>
+<br>		
+  </div>
+</fieldset>
+    <div class="rightreq">
+      <fieldset>
+				<legend>Informasi Pesanan</legend>
+			<br>	<label for="menu">Menu</label>
+				<br><input type="text" id="menu" name="menu" required>
+
+				<br><label for="jumlah">Jumlah</label>
+				<br><input type="number" id="jumlah" name="jumlah" required>
+
+				<br><label for="catatan">Catatan</label>
+				<textarea id="catatan" name="catatan"></textarea>
+			</fieldset>
+   </div>
+</div>
+			<button type="submit">Kirim Pesanan</button>
+		</form>
+	</main>
+	<footer>
+		<p>Silakan isi formulir di atas untuk melakukan request pesanan.</p>
+	</footer>
+</body>
+</html>

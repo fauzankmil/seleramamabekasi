@@ -1,0 +1,466 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins';
+    src: url(../fonts/poppins.woff2);
+    background-image: linear-gradient(to bottom, #25b392, #224a47, #215b5d, #1f6c75, #1f7d90);
+    color: white;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .content1 {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #113f2b;
+  }
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+
+  @media (max-width: 600px) {
+    /* Ubah tata letak untuk perangkat seluler */
+    body {
+      background-color: lightblue;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+
+     /* Media query untuk laptop */
+     @media (min-width: 601px) {
+      /* Ubah tata letak untuk laptop */
+      body {
+        background-color: lightgray;
+      }
+      h1 {
+        font-size: 36px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+    
+  /* Header/Blog Title */
+  .header {
+    padding: 0px;
+    text-align: center;
+    background: white;
+    
+  }
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+    padding: 10px;
+    flex: 1; 
+    border: 2px solid #113f2b;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    margin-top: 0;
+    bottom: 0;
+    padding: 1px;
+    width: 100%;
+    background-color: grey;
+    color: white;
+    text-align: center;
+ }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
+  
+  /* Style the navbar */
+  #navbar {
+    overflow: hidden;
+    background-color: #444;
+   
+  }
+  
+  nav ul {
+    list-style-type: none; /* menghilangkan bullet pada daftar item navbar */
+    margin: 0;
+    padding: 0;
+    display: flex; /* mengubah tampilan item menjadi flexbox */
+    justify-content: space-between; /* mengatur jarak antara item */
+  }
+
+  /* Navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: rgb(250, 248, 248);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: black;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: blue;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  /* Page content */
+  .content {
+    padding: 16px;
+  }
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 10px;
+  }
+  
+
+  
+  
+  /*tidak dipakai
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #a72b2b;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #943333;
+    color: black;
+  }
+  
+  .social h2{
+    font: bold 22px arial;
+    margin-top: 0px;  
+}
+.social a {
+  color: white;
+}
+  .float{
+      position:fixed;
+      width:60px;
+      height:60px;
+      bottom:40px;
+      right:40px;
+      padding: 15px;
+      background-color:#25d366;
+      color:#FFF;
+      border-radius:50px;
+      text-align:center;
+      font-size:30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index:100;
+  }
+  .my-float{
+      margin-top:16px;
+  }
+
+  .form-container {
+    max-width: 500px;
+    
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  input[type="text"],
+  textarea,
+  select,
+  input[type="number"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+
+  /* Bestseller */
+  section.best-seller {
+   
+    padding: 80px 30px 80px 30px;
+    text-align: center;
+ }
+ 
+ .best-seller h2 {
+    margin-bottom: 20px;
+ }
+ .best-seller .sub{
+    margin-bottom: 20px;
+    color: #113f2b;
+ }
+ 
+ .best-seller p.sub{
+    color: blue;
+ }
+ .best-seller .produk {
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+ 
+ }
+ .best-seller .produk img {
+  
+  width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+    object-fit: cover;
+
+ }
+ .best-seller .produk p {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 20px;
+ }
+
+ @media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* servis */
+
+
+    /* Bagian "Mengapa catering kami" */
+    .section {
+      background-color: #f5f5f5;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #333333;
+    }
+
+    /* Grid */
+
+     section.servis {
+      background-color: rgb(21, 112, 116);
+      padding: 10px 30px 10px 30px;
+      text-align: center;
+      color: #b1b406;
+      border: 2px solid #25b392;
+   }
+     section.servis:hover {
+      background-image: linear-gradient(to bottom, #203a34, #24514d, #25696b, #23828d, #249bb3);
+     }
+    .grid-containerservis {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      margin-top: 30px;
+    }
+
+    .grid-itemservis {
+      text-align: center;
+    }
+
+    .grid-itemservis img {
+      width: 80px;
+      height: 80px;
+    }
+    
+
+    .grid-itemservis h3 {
+      margin-top: 10px;
+      color: #c7ee38;
+      font-size: 20px;
+    }
+
+    /* Media query untuk responsif */
+    @media (max-width: 600px) {
+      .grid-containerservis {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Layanan */
+    /* Grid Card */
+
+    section.layanan {
+      background-color: rgb(21, 112, 116);
+      padding: 30px 30px 30px 30px;
+      text-align: center;
+      color: #b1b406;
+      border: 2px solid #25b392;
+    }
+    section.layanan:hover {
+      background-image: linear-gradient(to bottom, #203a34, #24514d, #25696b, #23828d, #249bb3);
+     }
+    .grid-containerlyn {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      margin-top: 30px;
+    }
+
+    .cardlyn {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      
+    }
+
+    .cardlyn img {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 10px;
+    }
+
+    .cardlyn h3 {
+      margin-top: 0;
+      color: #dbdada;
+    }
+
+    .cardlyn p {
+      color: #c5c1c1;
+    }
+
+    .cardlyn .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333333;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
