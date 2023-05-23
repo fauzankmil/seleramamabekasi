@@ -8,6 +8,7 @@
     case 'request':include "page/request.html";break;
     case 'galery':include "page/galery.html";break;
     case 'testimoni':include "page/testimoni.html";break;
+    case 'nasibox':include "page/nasibox.html";break;
     case 'main':
     default:include "page/home.html";
     }
